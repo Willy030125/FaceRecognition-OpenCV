@@ -1,12 +1,12 @@
 @echo off
 
-echo [Face Recognition using SVM Algorithm]
+echo [Face Recognition using OpenCV + Transfer Learning + SVM Classifier]
 
-python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7
+python extract_embeddings.py --dataset dataset --embeddings output/embeddings.pickle --detector face_detection_model --embedding-model nn4.small2.v1.t7
 
 python train_model.py --embeddings output/embeddings.pickle --recognizer output/recognizer.pickle --le output/le.pickle
 
-python recognize.py --detector face_detection_model --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle --image images/foto1.jpg
+python recognize.py --detector face_detection_model --embedding-model nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle --image images/foto1.jpg
 
 echo.
 echo Operation completed..

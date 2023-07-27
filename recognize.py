@@ -101,7 +101,7 @@ for i in range(0, detections.shape[2]):
 		cv2.rectangle(image, (startX, startY), (endX, endY),
 			(0, 255, 0), 2)
 		cv2.putText(image, text, (startX, y),
-			cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 255, 0), 2)
+			cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 0, 0), 2)
 
 # show the output image
 cv2.imshow("Image", image)
